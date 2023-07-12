@@ -1,0 +1,40 @@
+#contentContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 130vh;
+}
+
+#imgContainer {
+  display: flex;
+  margin: 90px auto;
+}
+
+#contentInformation {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  margin-top: 80px;
+  background-color: cadetblue;
+
+  align-content: center;
+  text-align: center;
+}
+
+#infoHeader {
+  font-size: 30px;
+}
+
+#infoPara {
+  align-self: center;
+  width: 750px;
+  font-size: 20px;
+}
+
+#contentContact {
+  padding: 20px;
+  height: 400px;
+  width: 1100px;
+  
+  justify-self: center;
+  align-self: center;
+}

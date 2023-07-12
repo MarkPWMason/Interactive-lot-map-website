@@ -1,0 +1,12 @@
+#headerContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  padding: 20px;
+}
+
+#logo {
+    height: 140px;
+    width: 215px;
+    background-color: black;
+}

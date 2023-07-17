@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div id={styles.headerContainer}>
       <div id={styles.logo}>
-        <img src="/images/placeholderLogo.png" alt="" />
+        <h1>Lorem ipsum.</h1>
       </div>
     </div>
   )

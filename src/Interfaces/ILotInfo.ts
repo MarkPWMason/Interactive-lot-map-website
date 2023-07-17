@@ -4,4 +4,5 @@ export default interface ILotInfo {
     description: string,
     price: string,
     size: string
+    descriptionExp: string,
 }

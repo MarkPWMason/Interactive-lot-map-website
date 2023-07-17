@@ -1,12 +1,21 @@
 #headerContainer {
   display: flex;
   flex-direction: row;
-  height: 100px;
-  padding: 20px;
 }
 
 #logo {
-    height: 140px;
-    width: 215px;
-    background-color: black;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+@media (max-width: 546px) {
+  #logo {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 364px) {
+  #logo {
+    font-size: 20px;
+  }
 }

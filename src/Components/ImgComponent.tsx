@@ -6,7 +6,7 @@ import lots from './Bounds';
 import LotModal from './LotModal';
 
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
+  const { outerWidth: width, outerHeight: height } = window;
   return {
     width,
     height,
@@ -16,13 +16,17 @@ function getWindowDimensions() {
 const ImgComponent = ({
   showModalId,
   setShowModalId,
+  showModalExpId,
+  setShowModalExpId,
   modalPos,
-  setModalPos
+  setModalPos,
 }: {
   showModalId: any;
   setShowModalId: any;
-  modalPos: any
-  setModalPos: any
+  showModalExpId: any;
+  setShowModalExpId: any;
+  modalPos: any;
+  setModalPos: any;
 }) => {
   const DEFAULT_IMAGE_WIDTH = 850;
   const DEFAULT_IMAGE_HEIGHT = 774;
@@ -47,7 +51,21 @@ const ImgComponent = ({
   if (windowDimensions.width > 2000) {
     scale = 1;
   }
+  if (windowDimensions.width < 1540) {
+    scale = 0.8;
+  }
+  if (windowDimensions.width < 690) {
+    scale = 0.6;
+  }
+  if (windowDimensions.width < 510) {
+    scale = 0.4;
+  }
+  if (windowDimensions.width < 340) {
+    scale = 0.3;
+  }
 
+  console.log(windowDimensions.width);
+  console.log("", window);
   return (
     <>
       <img
@@ -78,15 +96,21 @@ const ImgComponent = ({
               onMouseOver={() => {
                 setShowModalId(lot.id);
                 console.log(modalPos);
-                if(imgRef.current){
-                  setModalPos({ left: lot.bound.P4.x + imgRef.current?.offsetLeft, top: lot.bound.P4.y + imgRef.current?.offsetTop });
+                if (imgRef.current) {
+                  setModalPos({
+                    left: lot.bound.P4.x + imgRef.current?.offsetLeft,
+                    top: lot.bound.P4.y + imgRef.current?.offsetTop,
+                  });
                 }
-                
+
                 console.log(imgRef.current?.offsetTop);
               }}
               onMouseLeave={() => {
                 setShowModalId(-1);
                 setModalPos({ left: 0, top: 0 });
+              }}
+              onClick={() => {
+                setShowModalExpId(lot.id)
               }}
             />
           );

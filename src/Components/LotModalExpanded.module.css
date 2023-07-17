@@ -1,0 +1,146 @@
+#lotModalExpandedContainer {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  height: 500px;
+  width: 40%;
+  top: 800px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray;
+}
+
+#infoContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+}
+
+#modalBtn {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+
+  right: 0;
+}
+
+#lotTitle {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+@media (max-width: 1600px) {
+  #lotModalExpandedContainer {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1260px) {
+  #lotModalExpandedContainer {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1056px) {
+  #lotModalExpandedContainer {
+    width: 90%;
+    height: 350px;
+  }
+
+  #lotImg {
+    height: 350px;
+  }
+}
+
+@media (max-width: 790px) {
+  #lotModalExpandedContainer {
+    width: 90%;
+    height: 300px;
+    padding: 0;
+  }
+  #infoContainer {
+    padding: 10px;
+  }
+  #lotImg {
+    height: 300px;
+  }
+  #lotTitle {
+    font-size: 25px;
+    margin: 15px 0;
+  }
+  #description {
+    font-size: 15px;
+    margin: 5px 5px 15px 0;
+  }
+  #size {
+    font-size: 15px;
+    margin: 5px 5px 15px 0;
+  }
+  #price {
+    font-size: 15px;
+    margin: 5px 5px 15px 0;
+  }
+}
+
+@media (max-width: 626px) {
+  #lotModalExpandedContainer {
+    width: 90%;
+    height: 250px;
+    padding: 0;
+  }
+  #infoContainer {
+    padding: 10px;
+  }
+  #lotImg {
+    height: 250px;
+  }
+  #lotTitle {
+    font-size: 20px;
+    margin: 3px;
+  }
+  #description {
+    font-size: 10px;
+    margin: 3px;
+  }
+  #size {
+    font-size: 10px;
+    margin: 3px;
+  }
+  #price {
+    font-size: 10px;
+    margin: 3px;
+  }
+}
+
+@media (max-width: 400px) {
+  #lotModalExpandedContainer {
+    width: 90%;
+    height: 200px;
+    padding: 0;
+  }
+  #infoContainer {
+    padding: 10px;
+  }
+  #lotImg {
+    height: 200px;
+  }
+  #lotTitle {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  #description {
+    font-size: 8px;
+    margin: 0;
+  }
+  #size {
+    font-size: 8px;
+    margin: 0;
+  }
+  #price {
+    font-size: 8px;
+    margin: 0;
+  }
+}
